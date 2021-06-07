@@ -28,7 +28,7 @@
                 <Entry Grid.Column="1" Grid.Row="2" TextColor="Black" Text="{Binding Pass}"/>
             </Grid>
             <Button Text="SUBMIT" HorizontalOptions="Center" FontSize="Small" Command="{Binding RegisterCommand}"/>
-            <Label TextColor="{Binding Color}" Text="{Binding Message}"/>
+            <Label HorizontalOptions="Center" TextColor="{Binding Color}" Text="{Binding Message}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

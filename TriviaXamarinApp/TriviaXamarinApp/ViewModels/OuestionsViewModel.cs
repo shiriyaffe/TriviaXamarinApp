@@ -194,7 +194,7 @@ namespace TriviaXamarinApp.ViewModels
         void UserPage()
         {
             App a = (App)App.Current;
-            if (a != null)
+            if (a.User != null)
             {
                 Page p = new MyQuestions();
                 App.Current.MainPage.Navigation.PushAsync(p);

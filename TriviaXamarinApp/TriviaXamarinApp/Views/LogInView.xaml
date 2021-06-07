@@ -14,7 +14,7 @@
             <Label Text="Password" TextColor="Gray" FontSize="Small"/>
             <Entry x:Name="passEntry" Text="{Binding Pass}" IsPassword="True"/>
             <Button Text="SUBMIT" HorizontalOptions="Center" FontSize="Small" Command="{Binding LogInCommand}"/>
-            <Label TextColor="{Binding Color}" Text="{Binding Message}"/>
+            <Label HorizontalOptions="Center" TextColor="{Binding Color}" Text="{Binding Message}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
