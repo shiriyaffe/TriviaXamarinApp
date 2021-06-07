@@ -68,20 +68,6 @@ namespace TriviaXamarinApp.ViewModels
             }
         }
 
-        private string size;
-        public string Size
-        {
-            get
-            {
-                return this.size;
-            }
-            set
-            {
-                this.size = value;
-                OnPropertyChanged(nameof(Size));
-            }
-        }
-
         private string text;
         public string HeadText
         {
@@ -104,13 +90,11 @@ namespace TriviaXamarinApp.ViewModels
             {
                 HeadText = "Log in requierd!";
                 Color = "Red";
-                Size = "Medium";
             }
             else
             {
                 HeadText = "My Questions:";
                 Color = "MediumPurple";
-                Size = "Large";
             }
         }
 

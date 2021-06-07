@@ -11,7 +11,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="0">
-            <Label x:Name="head" BackgroundColor="Transparent" Padding="0" Text="{Binding HeadText}" TextColor="{Binding Color}" FontSize="{Binding Size}" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label x:Name="head" BackgroundColor="Transparent" Padding="0" Text="{Binding HeadText}" TextColor="{Binding Color}" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
             <CollectionView ItemsSource="{Binding Questions}" x:Name="collec">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -32,7 +32,7 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Button x:Name="show" Text="{Binding QText}" Clicked="show_Clicked" BackgroundColor="Transparent" BorderColor="LightGray"/>
+                                <Button x:Name="show" Text="{Binding QText}" Clicked="show_Clicked"/>
                             </Grid>
                         </SwipeView>
                     </DataTemplate>

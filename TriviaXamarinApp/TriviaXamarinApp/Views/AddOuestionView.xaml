@@ -7,8 +7,8 @@
              x:Class="TriviaXamarinApp.Views.AddOuestionView">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand">
-            <!--<Label Text="Add Question:" TextColor="MediumPurple" FontSize="Large" FontAttributes="Bold"/>-->
-            <!--<Label Padding="0" HeightRequest="20"/>-->
+            <Label Text="Add Question:" TextColor="MediumPurple" FontSize="Large" FontAttributes="Bold"/>
+            <Label Padding="0" HeightRequest="20"/>
             <Label Text="Question Text:" TextColor="Gray" Padding="0"/>
             <Entry TextColor="Black" Text="{Binding TextQ}" HeightRequest="35" FontSize="Small"/>
             <Label  Text="Correct Answer:" TextColor="Gray" Padding="0"/>
@@ -18,7 +18,7 @@
             <Entry TextColor="Black" Text="{Binding Answers[1]}" HeightRequest="35" FontSize="Small"/>
             <Entry TextColor="Black" Text="{Binding Answers[2]}" HeightRequest="35" FontSize="Small"/>
             <Button Text="SUBMIT" HorizontalOptions="Center" FontSize="Small" Command="{Binding AddCommand}"/>
-            <Label TextColor="{Binding Color}" Text="{Binding Message}" FontSize="Small"/>
+            <Label HorizontalOptions="Center" TextColor="{Binding Color}" Text="{Binding Message}" FontSize="Small"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -182,6 +182,7 @@ namespace TriviaXamarinApp.ViewModels
             {
                 Page p = new AddOuestionView();
                 p.Title = "Add Question";
+                Click = false;
                 App.Current.MainPage.Navigation.PushAsync(p);
             }
             else

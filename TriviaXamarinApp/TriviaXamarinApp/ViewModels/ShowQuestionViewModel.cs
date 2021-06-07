@@ -50,21 +50,21 @@ namespace TriviaXamarinApp.ViewModels
             }
         }
 
-        public ObservableCollection<string> ChangeOther;
-        //public ObservableCollection<string> ChangeOther
-        //{
-        //    get
-        //    {
-        //        return this.changeOther;
-        //    }
-        //    set
-        //    {
-        //        this.changeOther = value;
-        //        OnPropertyChanged(nameof(ChangeOther));
-        //    }
-        //}
+        private ObservableCollection<string> changeOther;
+        public ObservableCollection<string> ChangeOther
+        {
+            get
+            {
+                return this.changeOther;
+            }
+            set
+            {
+                this.changeOther = value;
+                OnPropertyChanged(nameof(ChangeOther));
+            }
+        }
 
-        
+
         public ICommand UpdateCommand => new Command(UpdateQues);
         async void UpdateQues()
         {
