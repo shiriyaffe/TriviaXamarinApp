@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TriviaXamarinApp.Views.ShowQuestionView">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Question:"/>
+            <Entry Text="{Binding ChangeQues}" TextColor="Black" HeightRequest="35" FontSize="Small"/>
+            <Label/>
+            <Label Text="Correct answer:"/>
+            <Entry Text="{Binding ChangeCorrectA}" TextColor="Green" HeightRequest="35" FontSize="Small"/>
+            <Label/>
+            <Entry Text="{Binding ChangeOther[0]}"  TextColor="Black" HeightRequest="35" FontSize="Small"/>
+            <Entry Text="{Binding ChangeOther[1]}"  TextColor="Black" HeightRequest="35" FontSize="Small"/>
+            <Entry Text="{Binding ChangeOther[2]}"  TextColor="Black" HeightRequest="35" FontSize="Small"/>
+
+            <Button Text="Update" Command="{Binding UpdateCommand}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TriviaXamarinApp.Views.RegisterView">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Register" TextColor="MediumPurple" FontSize="Large" FontAttributes="Bold"/>
+            <Label/>
+            <Grid  VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Text="NickName:" TextColor="Gray" Padding="0"/>
+                <Label Grid.Column="0" Grid.Row="1" Text="Email:" TextColor="Gray" Padding="0"/>
+                <Label Grid.Column="0" Grid.Row="2" Text="Password:" TextColor="Gray" Padding="0"/>
+                <Entry Grid.Column="1" Grid.Row="0" TextColor="Black" Text="{Binding NickName}"/>
+                <Entry Grid.Column="1" Grid.Row="1" TextColor="Black" Text="{Binding Email}"/>
+                <Entry Grid.Column="1" Grid.Row="2" TextColor="Black" Text="{Binding Pass}"/>
+            </Grid>
+            <Button Text="SUBMIT" HorizontalOptions="Center" FontSize="Small" Command="{Binding RegisterCommand}"/>
+            <Label TextColor="{Binding Color}" Text="{Binding Message}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

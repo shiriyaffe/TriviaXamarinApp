@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TriviaXamarinApp.Views.HomePage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Button BackgroundColor="Transparent" TextColor="Purple" x:Name="ques" FontAttributes="Bold" FontSize="Large" Text="Play" Clicked="ques_Clicked"/>
+            <Label/>
+            <Button BackgroundColor="Transparent" TextColor="MediumPurple" x:Name="login" Text="Log In" Clicked="login_Clicked" Padding="0"/>
+            <Button BackgroundColor="Transparent" TextColor="MediumPurple" x:Name="signup" Text="Register" Clicked="signup_Clicked" Padding="0"/>
+            <Button BackgroundColor="Transparent" TextColor="MediumPurple" x:Name="me" Text="My Questions" Clicked="me_Clicked" Padding="0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

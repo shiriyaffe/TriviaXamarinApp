@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TriviaXamarinApp.Views.QuestionsView"
+             x:Name="ThePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log In" Order="Secondary" Priority="1" Command="{Binding ToLogIn}"></ToolbarItem>
+        <ToolbarItem Text="Sign Up" Order="Secondary" Priority="2" Command="{Binding ToSignUp}"></ToolbarItem>
+        <ToolbarItem Text="My Questions" Order="Secondary" Priority="3" Command="{Binding ToUserPage}"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <Label Text="{Binding QText}" TextColor="Purple" FontSize="Small" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <CollectionView ItemsSource="{Binding Answers}" x:Name="collec"  VerticalOptions="CenterAndExpand">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="answer" Text="{Binding AText}" TextColor="{Binding Color}" Padding="0" Command="{Binding Source={x:Reference ThePage}, Path=BindingContext.IsCorrectCommand}" CommandParameter="{Binding}"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="{Binding Message}" TextColor="Red" FontSize="Small" HorizontalOptions="Center" HeightRequest="20"></Label>
+            <Button x:Name="addQues" Text="Add Question" Command="{Binding ToAddPageCommand}" IsEnabled="{Binding Click}" Padding="0"  HeightRequest="40"/>
+            <Button Text="Next" x:Name="next" Clicked="next_Clicked" Padding="0" BackgroundColor="LavenderBlush" HeightRequest="30"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
