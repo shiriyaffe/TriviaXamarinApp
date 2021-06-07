@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TriviaXamarinApp.Views.QuestionsView"
-             x:Name="ThePage">
+             x:Name="ThePage"
+             NavigationPage.HasBackButton="False">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Log In" Order="Secondary" Priority="1" Command="{Binding ToLogIn}"></ToolbarItem>
         <ToolbarItem Text="Sign Up" Order="Secondary" Priority="2" Command="{Binding ToSignUp}"></ToolbarItem>

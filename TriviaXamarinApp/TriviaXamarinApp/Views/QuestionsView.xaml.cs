@@ -16,6 +16,7 @@ namespace TriviaXamarinApp.Views
     {
         public QuestionsView()
         {
+            //NavigationPage.SetHasBackButton(this, false);
             InitializeComponent();
             this.BindingContext = new OuestionsViewModel();
         }
