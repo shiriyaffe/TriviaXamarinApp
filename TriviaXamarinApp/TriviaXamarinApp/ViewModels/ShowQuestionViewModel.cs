@@ -50,19 +50,19 @@ namespace TriviaXamarinApp.ViewModels
             }
         }
 
-        private ObservableCollection<string> changeOther;
-        public ObservableCollection<string> ChangeOther
-        {
-            get
-            {
-                return this.changeOther;
-            }
-            set
-            {
-                this.changeOther = value;
-                OnPropertyChanged(nameof(ChangeOther));
-            }
-        }
+        public ObservableCollection<string> ChangeOther;
+        //public ObservableCollection<string> ChangeOther
+        //{
+        //    get
+        //    {
+        //        return this.changeOther;
+        //    }
+        //    set
+        //    {
+        //        this.changeOther = value;
+        //        OnPropertyChanged(nameof(ChangeOther));
+        //    }
+        //}
 
         
         public ICommand UpdateCommand => new Command(UpdateQues);
@@ -106,17 +106,24 @@ namespace TriviaXamarinApp.ViewModels
 
             TriviaWebAPIProxy proxy = TriviaWebAPIProxy.CreateProxy();
             bool delete = false;
+            AmericanQuestion q = null;
 
             foreach (AmericanQuestion a in arr)
             {
                 if (a.QText == Text)
                 {
-                    delete = await proxy.DeleteQuestion(a);
+                    q = a;
                 }
             }
 
-            bool add = await proxy.PostNewQuestion(change);
-
+            if(q != null)
+            {
+                delete = await proxy.DeleteQuestion(q);
+                app.User.Questions.Remove(q);
+                bool add = await proxy.PostNewQuestion(change);
+                app.User.Questions.Add(change);
+            }
+            
             await App.Current.MainPage.Navigation.PushAsync(new MyQuestions());
         }
     }

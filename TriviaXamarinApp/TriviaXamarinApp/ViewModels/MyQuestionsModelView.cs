@@ -50,6 +50,7 @@ namespace TriviaXamarinApp.ViewModels
             {
                 App a = (App)App.Current;
                 a.User.Questions.Remove(q);
+                await App.Current.MainPage.Navigation.PushAsync(new MyQuestions());
             }
         }
 
@@ -95,7 +96,6 @@ namespace TriviaXamarinApp.ViewModels
             }
         }
 
-        //public ICommand BuildCommand => new Command(OpenPage);
 
         public void OpenPage()
         {
